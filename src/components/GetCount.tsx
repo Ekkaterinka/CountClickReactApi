@@ -11,7 +11,8 @@ export default function GetCount({count}: {count:number}) {
             {item.error_ui ?
                 <Typography variant="body2">"Ошибочка вышла!"</Typography>
                 :
-                <Typography variant="body2">По версии сервера: {item.count} раз</Typography >}
+              (!isLoading &&
+                <Typography variant="body2">По версии сервера: {item.count} раз</Typography>)}
         </>
 
     );
